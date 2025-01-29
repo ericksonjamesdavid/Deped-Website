@@ -1,0 +1,475 @@
+*{
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('images/BG home.png'); /* Replace with your image URL */
+    background-size: cover; /* Ensures the background covers the entire screen */
+    background-position: center center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    font-family: Arial, sans-serif; /* Ensure text is legible */
+}
+
+/* Header Style */
+.navbar ul {
+    list-style-type: none;
+    background-color: rgb(33, 44, 58);
+    text-align: center;
+    position: relative;
+    padding: 10px;
+    margin: 0;
+}
+.navbar a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 3vw; /* Use viewport width for responsive padding */
+    display: inline-block;
+    text-align: center;
+}
+.navbar a:hover {
+    background-color: hsla(221, 45%, 25%, 0.966);
+}
+.navbar li {
+    line-height: 1.5;
+    margin-left: 5vw; /* Adjusted for responsive margin */
+    margin-right: 1vw;
+    text-align: center;
+    display: inline-block;
+}
+hr{
+    width: 70%;
+}
+.navbar {
+    font-size: 11px; /* Use vw for responsive font size */
+}
+.navbar a.active { 
+    border: 2px solid rgb(255, 255, 255); /* Add a bottom border to active link */
+ }
+
+h4{
+    font-size: 17px; /* Adjust to make the header font size responsive */
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+}
+
+.logo {
+    position: absolute;
+    display: flex;
+    left: 0; /* Align the logo to the left side */
+    top: 1%; /* Optionally, position it vertically in the center */
+    width: -1em; /* Use vw to make the logo size responsive */
+    height: auto;
+    margin-left: 70px;
+    margin-top: -0em;
+}
+@media screen and (max-width: 1280px) { 
+   
+    .logo { max-width: 150px; /* Adjust logo size */ }
+ }
+@media screen and (max-width: 600px) 
+{ .navbar a { padding: 5px; /* Adjust padding for small screens */ } 
+  .navbar { font-size: 12px; /* Adjust font size for small screens */ } 
+  .logo { display: none; /* Hide the logo on small screens */ }
+ }
+ /* Media Query for screens smaller than 800px */ 
+ @media screen and (max-width: 800px)
+  { .logo { display: none; /* Adjust logo size */ }
+} 
+ /* Media Query for screens smaller than 600px */
+
+  @media screen and (max-width: 600px) 
+ { .navbar a { padding: 5px; /* Adjust padding for small screens */ } 
+ .navbar { font-size: 12px; /* Adjust font size for small screens */ } 
+ .logo { display: none; /* Adjust logo size */ } 
+} 
+ /* Media Query for screens smaller than 400px */ 
+
+ @media screen and (max-width: 400px)
+  { .logo { display: none; 
+    /* Hide the logo on very small screens */ } 
+}
+@media screen and (max-width: 300px) { 
+    .logo { display: none; /* Hide the logo on very small screens */ }
+ }
+
+
+.container{
+    display: flex;              /* Enables flexbox */
+    justify-content: center;   /* Centers the logos horizontally */
+    align-items: center;       /* Centers the logos vertically */
+    top: 100px;
+    gap:9px;
+}
+
+.logo1, .logo2 {
+    width: 60px;
+    height: 50px;
+}
+
+.logo3{
+    width: 90px;
+    height: 60px;
+}
+
+
+.body {
+    margin: 40px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.carousel-box {
+
+    background-color: none;
+    margin: 20px;
+}
+
+.carousel-box .slide img {
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Rounded corners for images */
+}
+
+.carousel {
+    margin: 0 auto;
+    border-radius: 15px;
+    max-width: 700px;
+    height: auto;
+    background-color: rgb(43, 42, 42); 
+
+}
+
+.carousel-slides{
+    border-radius: 15px;
+    min-width: 100%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: rgb(0, 0, 0, 0.35) 0px 5px 15px;
+    aspect-ratio: 16/11;
+}
+
+.slide{
+    min-width: 100%;
+    position: absolute;
+    height: 100%;
+    opacity: 0;
+    inset: 0;
+    animation: slide-show 20s infinite;
+}
+
+.slide img{
+    padding: 2.5%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slide-2{
+    animation-delay: 5s;
+}
+
+.slide-3{
+    animation-delay: 10s;
+}
+
+.slide-4{
+    animation-delay: 15s;
+}
+
+.slide-5{
+    animation-delay: 20s;
+}
+
+@keyframes slide-show{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    20%,
+    30%{
+        opacity: 1;
+        scale: 1.03;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
+
+.box1,
+.box2 {
+    background-color: beige(255, 255, 255);
+}
+
+.box1,
+.box2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px,1fr));
+    justify-content: center;
+    margin: 20px;
+    row-gap: 20px;
+    column-gap: 50px;
+}
+
+
+.memorandum,
+.statement,
+.orders,
+.quick-links {
+    background-color: hsl(0deg 0% 0% / 56%);
+    border-radius: -29px;
+    box-shadow: rgb(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.memorandum h1,
+.statement h1,
+.orders h1,
+.quick-links h1 {
+    color: white;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.memorandum h3,
+.orders h3 {
+    padding: 2%;
+    text-align: justify;
+    font-size: 14px;
+}
+
+.statement-box p {
+    padding: 3%;
+    text-align: justify;
+}
+    
+.link-box h3 {
+    padding: 1%;
+    text-align: center;
+    font-size: 14px;
+}
+
+.memorandum a,
+.statement a,
+.orders a,
+.quick-links a {
+    text-decoration: none;
+    color: black;
+}
+
+.memo-box,
+.statement-box p,
+.order-box {
+    background-color: rgb(255, 255, 255);
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: rgb(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.link-box {
+    background-color: rgb(255, 255, 255);
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: rgb(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.memo-box:hover,
+.statement-box p:hover,
+.order-box:hover,
+.link-box:hover {
+    background-color: hsla(221, 58%, 64%, 0.568);
+    color: rgb(250, 250, 252);
+    
+    
+}
+
+
+.video-container {
+    background-color: hsl(0deg 0% 0% / 56%);
+    border-radius: 15px;
+    margin: 20px;
+    align-items: center;
+    box-shadow: rgb(0, 0, 0, 0.35) 0px 5px 15px;
+}
+    
+
+.video-container h1{
+    padding-top: 20px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+
+.video-container iframe{
+    width: 100%;
+    margin: 0;
+}
+
+.video-text{
+    padding: 1%;
+    text-align: justify;
+    background-color: rgb(255, 255, 255);
+    border-radius: 13px;
+    margin: 20px;
+}
+
+
+
+.footer{
+    gap:0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1px, auto));
+    gap: -5em;
+    width: auto;
+    background-color: rgb(33, 44, 58);
+    /* Remove absolute positioning */
+    position: relative;
+
+} 
+
+
+.footer h2{
+    margin-left: 15px;
+    margin-top: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+ 
+}
+.footer1 .right-area {
+     margin-right: 15px;
+}
+
+
+.PH li{
+    margin-left: 15px;
+    margin-right: 20%;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+}
+
+.GOV li{
+    margin-top: 20px;
+    margin-right: 20%;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+}
+.footer h2{
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    
+   
+}
+.info, .info li {
+    margin-top: 1px;
+    padding: 0;
+}
+.info li{
+    margin-right: 0px;
+    color: rgb(255, 255, 255);
+    font-size: 14px; 
+    margin-left: 80px;
+ 
+}
+#horizontal-line{
+    width: 100%;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    display: flex;
+    position: absolute;
+   
+}
+img.Soc{
+
+    margin-top: 120px;
+    margin-left: 125%;
+    margin-right: 10%;
+    margin-bottom: 12px;
+}
+h5{
+    color: rgb(255, 251, 251);
+  text-align: center;
+  position: absolute;
+  font-size: 12px;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for center */
+  margin-left: 30px;
+  margin-top: 55px;
+    
+
+}
+
+/* Base styles for the footer */
+.footer {
+  font-size: 16px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .footer {
+      font-size: 12px;  /* Mas maliit na font size sa mga maliliit na screen */
+  }
+
+  /* Adjust specific elements if needed */
+  .footer h4 {
+      font-size: 6px; /* Adjust heading size */
+  }
+
+  .footer h5 {
+      display: none; /* Adjust smaller heading */
+  }
+
+  .footer ul {
+      font-size: -12em;  /* Adjust list font size */
+  }
+  img.Soc {
+    display: none;
+  }
+}
+#horizontal-line {
+  border: 0;
+  border-top: 2px solid #fcfcfc; /* Black solid line */
+  width: 100%; /* Adjust the width of the <hr> */
+  margin: 120px auto; /* Center the <hr> and add vertical margin */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  #horizontal-line {
+      border-top: 1px solid #ffffff; /* Thinner line on smaller screens */
+      width: 100%; /* Increase width on smaller screens */
+      margin-top: auto;
+  }
+
+img{
+    margin-right: 18px;
+    margin-top: 20%;
+}
+}
+@media (max-width: 768px) { 
+    .footer {
+      grid-template-columns: 1fr; /* One column for smaller screens */
+    }
+    h5{
+      margin-top: 25%;
+      margin-left: 20px;
+    }
+    
+    img.Soc {
+      margin-left: 0; /* Adjust margins for smaller screens */
+    }
+    /* Add more styles for smaller screens as needed */
+  }
